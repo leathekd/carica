@@ -250,6 +250,7 @@ building the classpath by hand.
 
 ## License
 
-Copyright © 2012-2016 Sonian, Inc.
+Copyright © 2012-2019 Sonian, Inc.
+Original source can be found at http://www.github.com/sonian/carica
 
 Distributed under the Eclipse Public License, the same as Clojure.
