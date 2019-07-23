@@ -1,4 +1,4 @@
-(defproject carica "1.2.3"
+(defproject leathekd/carica "1.2.3"
   :description "A flexible configuration library"
   :url "https://github.com/leathekd/carica"
   :dependencies [[cheshire "5.8.1"]
