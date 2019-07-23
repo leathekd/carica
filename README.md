@@ -15,11 +15,11 @@ It offers:
 
 ## Setup
 
-```clojure
-[leathekd/carica "1.3.0"]
+[![Clojars Project](https://img.shields.io/clojars/v/leathekd/carica.svg)](https://clojars.org/leathekd/carica)
 
+```clojure
 ;; *or*, when not using JSON config files:
-[leathekd/carica "1.3.0" :exclusions [[cheshire]]]
+[leathekd/carica "<Version from the badge above>" :exclusions [[cheshire]]]
 ```
 
 Carica looks for the config files on the classpath.
