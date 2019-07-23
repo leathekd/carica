@@ -16,10 +16,10 @@ It offers:
 ## Setup
 
 ```clojure
-[sonian/carica "1.2.2"]
+[leathekd/carica "1.3.0"]
 
 ;; *or*, when not using JSON config files:
-[sonian/carica "1.2.2" :exclusions [[cheshire]]]
+[leathekd/carica "1.3.0" :exclusions [[cheshire]]]
 ```
 
 Carica looks for the config files on the classpath.
