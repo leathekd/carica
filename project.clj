@@ -11,7 +11,8 @@
 
   :profiles {:dev
              {:resource-paths ["etc"]
-              :dependencies [[org.clojure/clojure "1.10.1"]]}}
+              :dependencies [[org.clojure/clojure "1.10.1"]
+                             [amperity/vault-clj "0.7.0"]]}}
 
   :deploy-repositories {"releases" {:url "https://repo.clojars.org"
                                     :username [:gpg :env/clojars_username]
