@@ -1,7 +1,8 @@
 (ns carica.middleware.vault
   (:require [carica.middleware :as mw]
             [clojure.string :as string]
-            [vault.core :as vault]))
+            [vault.core :as vault]
+            [vault.client.http]))
 
 (defn vault-addr*
   "Retrieves the Vault address from the VAULT_ADDR environment variable."
