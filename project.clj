@@ -1,4 +1,4 @@
-(defproject leathekd/carica "1.3.2-SNAPSHOT"
+(defproject leathekd/carica "1.3.3-SNAPSHOT"
   :description "A flexible configuration library"
   :url "https://github.com/leathekd/carica"
   :license {:name "Eclipse Public License"
