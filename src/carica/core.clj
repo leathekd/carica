@@ -62,8 +62,8 @@
   (load-with resource clj-reader/read))
 
 (defmethod load-config :carica/json [resource]
-  (with-open [s (.openStream resource)]
-    (-> s io/reader (json-parse-stream true))))
+  (with-open [s (io/reader resource)]
+    (json-parse-stream s true)))
 
 (derive :carica/clj :carica/edn)
 
