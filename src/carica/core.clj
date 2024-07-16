@@ -44,6 +44,10 @@
       (throw
        (Exception. (str "error reading config " resource) t)))))
 
+(def ^:dynamic *edn-reader-opts* {})
+(defn read-edn [in]
+  (edn/read *edn-reader-opts* in))
+
 (defmulti load-config
   "Load and read the config into a map of Clojure maps.  Dispatches
   based on the file extension."
@@ -56,7 +60,7 @@
          (keyword "carica"))))
 
 (defmethod load-config :carica/edn [resource]
-  (load-with resource edn/read))
+  (load-with resource read-edn))
 
 (defmethod load-config :carica/clj [resource]
   (load-with resource clj-reader/read))

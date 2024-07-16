@@ -105,3 +105,14 @@
       ;; catches the error and sends a warning to the log.
       (is (thrown-with-msg? Exception #"^error reading config.*"
                             (edn-config :quoted-vectors-fail))))))
+
+(defn inc-literal [elem]
+  (inc elem))
+
+(defn string->reader [s]
+  (java.io.PushbackReader. (java.io.BufferedReader. (java.io.StringReader. s))))
+
+(deftest test-edn-read-opts
+  (binding [*edn-reader-opts* {:readers {'inc #'inc-literal}}]
+    (is (= (read-edn (string->reader "{:foo 1 :inc #inc 2}"))
+           {:foo 1 :inc 3}))))
