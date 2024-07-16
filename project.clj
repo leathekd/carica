@@ -15,11 +15,11 @@
                              [amperity/vault-clj "0.7.0"]]}}
 
   :deploy-repositories {"releases" {:url "https://repo.clojars.org"
-                                    :username [:gpg :env/clojars_username]
-                                    :password [:gpg :env/clojars_password]}
+                                    :username :env/clojars_username
+                                    :password :env/clojars_password}
                         "snapshots" {:url "https://repo.clojars.org"
-                                     :username [:gpg :env/clojars_username]
-                                     :password [:gpg :env/clojars_password]}}
+                                     :username :env/clojars_username
+                                     :password :env/clojars_password}}
   :release-tasks
   [["clean"]
    ["vcs" "assert-committed"]
